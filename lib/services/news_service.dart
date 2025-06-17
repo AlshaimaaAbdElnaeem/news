@@ -11,7 +11,7 @@ class NewsService {
     var response = await dio.get(
       "https://newsapi.org/v2/top-headlines?country=us&apiKey=8d3f1c6bf00f4552928657d5e97d0c3e&category=$category",
     );
-    Map<String, dynamic> jsonData = response.data;
+   
     List<dynamic> articles = jsonData['articles'] ;
     List<ArticleModel> articlesList = [];
     for (var article in articles) {
